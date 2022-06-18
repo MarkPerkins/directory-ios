@@ -8,10 +8,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
 
-        let rootView = RootView()
+        let rootViewController = DirectoryViewController()
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UIHostingController(rootView: rootView)
+        window.rootViewController = rootViewController
         self.window = window
         window.makeKeyAndVisible()
     }
