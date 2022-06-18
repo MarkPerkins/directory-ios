@@ -17,6 +17,7 @@
 		40CA83D0285E08A4002203B2 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83CF285E08A4002203B2 /* EmployeeTableViewCell.swift */; };
 		40CA83D3285E0901002203B2 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */; };
 		40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */; };
+		40CA83D7285E50FF002203B2 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D6285E50FF002203B2 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		40CA83CF285E08A4002203B2 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryNavigationController.swift; sourceTree = "<group>"; };
+		40CA83D6285E50FF002203B2 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		40CA83C6285DFFC5002203B2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				40CA83D6285E50FF002203B2 /* Employee.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40CA83D3285E0901002203B2 /* UITableViewCellExtensions.swift in Sources */,
+				40CA83D7285E50FF002203B2 /* Employee.swift in Sources */,
 				40CA83CE285E0419002203B2 /* DirectoryViewModel.swift in Sources */,
 				40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */,
 				40CA83C3285DFB84002203B2 /* SceneDelegate.swift in Sources */,
