@@ -18,6 +18,7 @@
 		40CA83D3285E0901002203B2 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */; };
 		40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */; };
 		40CA83D7285E50FF002203B2 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D6285E50FF002203B2 /* Employee.swift */; };
+		40CA83DA285E534E002203B2 /* Codextended in Frameworks */ = {isa = PBXBuildFile; productRef = 40CA83D9285E534E002203B2 /* Codextended */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CA83DA285E534E002203B2 /* Codextended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,9 @@
 			dependencies = (
 			);
 			name = Directory;
+			packageProductDependencies = (
+				40CA83D9285E534E002203B2 /* Codextended */,
+			);
 			productName = Directory;
 			productReference = 40CA8393285DFA87002203B2 /* Directory.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 40CA838A285DFA87002203B2;
+			packageReferences = (
+				40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */,
+			);
 			productRefGroup = 40CA8394285DFA87002203B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -518,6 +526,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Codextended";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40CA83D9285E534E002203B2 /* Codextended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */;
+			productName = Codextended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 40CA838B285DFA87002203B2 /* Project object */;
 }
