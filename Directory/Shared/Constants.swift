@@ -3,7 +3,7 @@ import Foundation
 class Constants {
 
     struct Network {
-        static let employeeEndpoint = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+        static let directoryEndpoint = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
     }
 
     struct MockResponses {

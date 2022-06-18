@@ -20,8 +20,15 @@ class DirectoryViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.refreshControl = refreshControl
         tableView.register(EmployeeTableViewCell.self, forCellReuseIdentifier: EmployeeTableViewCell.defaultReuseIdentifier)
         return tableView
+    }()
+
+    private lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(fetchDataAndReload), for: .valueChanged)
+        return control
     }()
 
     override func viewDidLoad() {
@@ -32,10 +39,13 @@ class DirectoryViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
+        fetchDataAndReload()
     }
 
     private func setupViews() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .white
+        tableView.backgroundColor = .white
         view.addSubview(tableView)
     }
 
@@ -47,6 +57,15 @@ class DirectoryViewController: UIViewController {
         constraints.append(tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
         NSLayoutConstraint.activate(constraints)
     }
+
+    @objc private func fetchDataAndReload() {
+        viewModel.loadEmployees { [weak self] in
+            DispatchQueue.main.async {
+                self?.refreshControl.endRefreshing()
+                self?.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension DirectoryViewController: UITableViewDataSource {
@@ -55,12 +74,12 @@ extension DirectoryViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        50
+        viewModel.employees.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.defaultReuseIdentifier, for: indexPath) as! EmployeeTableViewCell
-        cell.textLabel?.text = "This is a test"
+        cell.employee = viewModel.employees.subscriptSafe(indexPath.row)
         return cell
     }
 }
@@ -68,7 +87,7 @@ extension DirectoryViewController: UITableViewDataSource {
 extension DirectoryViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 88
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
