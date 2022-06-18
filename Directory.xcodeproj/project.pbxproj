@@ -14,6 +14,9 @@
 		40CA83CA285E0032002203B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83C9285E0032002203B2 /* Constants.swift */; };
 		40CA83CC285E040F002203B2 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83CB285E040F002203B2 /* DirectoryViewController.swift */; };
 		40CA83CE285E0419002203B2 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */; };
+		40CA83D0285E08A4002203B2 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83CF285E08A4002203B2 /* EmployeeTableViewCell.swift */; };
+		40CA83D3285E0901002203B2 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */; };
+		40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 		40CA83C9285E0032002203B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40CA83CB285E040F002203B2 /* DirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
 		40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModel.swift; sourceTree = "<group>"; };
+		40CA83CF285E08A4002203B2 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 		40CA83C7285DFFCC002203B2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				40CA83D1285E08F1002203B2 /* Extensions */,
 				40CA83C9285E0032002203B2 /* Constants.swift */,
 			);
 			path = Shared;
@@ -123,10 +130,20 @@
 		40CA83C8285DFFDB002203B2 /* Directory */ = {
 			isa = PBXGroup;
 			children = (
+				40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */,
 				40CA83CB285E040F002203B2 /* DirectoryViewController.swift */,
 				40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */,
+				40CA83CF285E08A4002203B2 /* EmployeeTableViewCell.swift */,
 			);
 			path = Directory;
+			sourceTree = "<group>";
+		};
+		40CA83D1285E08F1002203B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,11 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CA83D3285E0901002203B2 /* UITableViewCellExtensions.swift in Sources */,
 				40CA83CE285E0419002203B2 /* DirectoryViewModel.swift in Sources */,
 				40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */,
 				40CA83C3285DFB84002203B2 /* SceneDelegate.swift in Sources */,
 				40CA83CC285E040F002203B2 /* DirectoryViewController.swift in Sources */,
 				40CA83CA285E0032002203B2 /* Constants.swift in Sources */,
+				40CA83D0285E08A4002203B2 /* EmployeeTableViewCell.swift in Sources */,
+				40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
