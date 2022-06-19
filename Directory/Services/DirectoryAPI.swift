@@ -5,6 +5,10 @@ enum DirectoryServiceError: Error {
     case malformed
 }
 
+enum DirectorySort {
+    case firstName
+}
+
 protocol DirectoryAPI {
-    func fetchEmployees(completion: @escaping (Result<[Employee], DirectoryServiceError>) -> Void)
+    func fetchEmployees(sortedBy: DirectorySort, completion: @escaping (Result<[Employee], DirectoryServiceError>) -> Void)
 }

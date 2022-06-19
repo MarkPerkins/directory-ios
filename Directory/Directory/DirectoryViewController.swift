@@ -1,8 +1,16 @@
 import UIKit
+import SwiftUI
 
 class DirectoryViewController: UIViewController {
 
     let viewModel: DirectoryViewModel
+
+    private var fetchFailed: Bool = false {
+        didSet {
+            view.setNeedsLayout()
+            view.layoutIfNeeded()
+        }
+    }
 
     init(viewModel: DirectoryViewModel = DirectoryViewModel()) {
         self.viewModel = viewModel
@@ -42,6 +50,11 @@ class DirectoryViewController: UIViewController {
         fetchDataAndReload()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupTableHeader()
+    }
+
     private func setupViews() {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
@@ -59,11 +72,20 @@ class DirectoryViewController: UIViewController {
     }
 
     @objc private func fetchDataAndReload() {
-        viewModel.loadEmployees { [weak self] in
+        viewModel.loadEmployees { [weak self] success in
             DispatchQueue.main.async {
+                self?.fetchFailed = !success
                 self?.refreshControl.endRefreshing()
                 self?.tableView.reloadData()
             }
+        }
+    }
+
+    private func setupTableHeader() {
+        if fetchFailed {
+            tableView.tableHeaderView = ErrorView()
+        } else {
+            tableView.tableHeaderView = nil
         }
     }
 }

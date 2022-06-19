@@ -10,16 +10,20 @@ class DirectoryViewModel {
         self.directoryService = directoryService
     }
 
-    func loadEmployees(completion: (() -> Void)?) {
-        directoryService.fetchEmployees { [weak self] result in
+    func loadEmployees(completion: @escaping (_ success: Bool) -> Void) {
+        directoryService.fetchEmployees(sortedBy: .firstName) { [weak self] result in
             switch result {
             case .success(let employeeList):
                 self?.employees = employeeList
             case .failure(let error):
-                print("error occured: \(error.localizedDescription)")
-                // handle error
+                switch error {
+                case .malformed, .empty:
+                    print("response malformed or empty")
+                    completion(false)
+                    return
+                }
             }
-            completion?()
+            completion(true)
         }
     }
 }

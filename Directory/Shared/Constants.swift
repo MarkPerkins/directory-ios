@@ -1,5 +1,7 @@
 import Foundation
 
+class DesignConstants { }
+
 class Constants {
 
     struct Network {

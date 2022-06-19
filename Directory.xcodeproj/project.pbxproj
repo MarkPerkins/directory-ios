@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4081B12B285FBBD500473E8F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4081B12A285FBBD500473E8F /* SDWebImage */; };
+		4081B12E285FCCC200473E8F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B12D285FCCC200473E8F /* ErrorView.swift */; };
 		40CA839B285DFA88002203B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839A285DFA88002203B2 /* Assets.xcassets */; };
 		40CA839E285DFA88002203B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839D285DFA88002203B2 /* Preview Assets.xcassets */; };
 		40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83C0285DFB69002203B2 /* AppDelegate.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4081B12D285FCCC200473E8F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		40CA8393285DFA87002203B2 /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CA839A285DFA88002203B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40CA839D285DFA88002203B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4081B12B285FBBD500473E8F /* SDWebImage in Frameworks */,
 				40CA83DA285E534E002203B2 /* Codextended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +155,7 @@
 				40CA83CB285E040F002203B2 /* DirectoryViewController.swift */,
 				40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */,
 				40CA83E6285E75A7002203B2 /* EmployeeTableViewCell.swift */,
+				4081B12D285FCCC200473E8F /* ErrorView.swift */,
 			);
 			path = Directory;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			name = Directory;
 			packageProductDependencies = (
 				40CA83D9285E534E002203B2 /* Codextended */,
+				4081B12A285FBBD500473E8F /* SDWebImage */,
 			);
 			productName = Directory;
 			productReference = 40CA8393285DFA87002203B2 /* Directory.app */;
@@ -245,6 +251,7 @@
 			mainGroup = 40CA838A285DFA87002203B2;
 			packageReferences = (
 				40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */,
+				4081B129285FBBD500473E8F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 40CA8394285DFA87002203B2 /* Products */;
 			projectDirPath = "";
@@ -290,6 +297,7 @@
 				40CA83CC285E040F002203B2 /* DirectoryViewController.swift in Sources */,
 				40CA83ED285E807E002203B2 /* UIViewExtensions.swift in Sources */,
 				40CA83CA285E0032002203B2 /* Constants.swift in Sources */,
+				4081B12E285FCCC200473E8F /* ErrorView.swift in Sources */,
 				40CA83DC285E5BE1002203B2 /* DirectoryAPI.swift in Sources */,
 				40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */,
 				40CA83E8285E75A7002203B2 /* EmployeeTableViewCell.swift in Sources */,
@@ -556,6 +564,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4081B129285FBBD500473E8F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.12.6;
+			};
+		};
 		40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JohnSundell/Codextended";
@@ -567,6 +583,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4081B12A285FBBD500473E8F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4081B129285FBBD500473E8F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		40CA83D9285E534E002203B2 /* Codextended */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 40CA83D8285E534E002203B2 /* XCRemoteSwiftPackageReference "Codextended" */;

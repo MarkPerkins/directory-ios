@@ -1,3 +1,4 @@
+import SDWebImage
 import UIKit
 
 class EmployeeTableViewCell: UITableViewCell {
@@ -12,8 +13,8 @@ class EmployeeTableViewCell: UITableViewCell {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "unavailable")
-        imageView.widthAnchor.constraint(equalToConstant: 90).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: DesignConstants.imageSize).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: DesignConstants.imageSize).isActive = true
         imageView.layer.borderWidth = 1.0
         imageView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         return imageView
@@ -22,7 +23,7 @@ class EmployeeTableViewCell: UITableViewCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.backgroundColor = .clear
         label.textAlignment = .left
         label.numberOfLines = 1
@@ -47,7 +48,6 @@ class EmployeeTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = .clear
-        translatesAutoresizingMaskIntoConstraints = false
         setupViews()
         setupConstraints()
     }
@@ -68,13 +68,35 @@ class EmployeeTableViewCell: UITableViewCell {
     }
 
     private func setupConstraints() {
-        
+        photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: DesignConstants.margin2x).isActive = true
+        photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DesignConstants.margin2x).isActive = true
+
+        nameLabel.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: DesignConstants.margin2x).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DesignConstants.margin4x).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -DesignConstants.margin2x).isActive = true
+
+        teamLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor).isActive = true
+        teamLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: DesignConstants.spacing1x).isActive = true
     }
 
     private func reloadUi() {
         guard let data = employee else { return }
         nameLabel.text = data.name
         teamLabel.text = data.team
-        photoImageView.image = UIImage(named: "yeah")
+
+        if let smallImageURL = data.imageSmall, let imageURL = URL(string: smallImageURL) {
+            photoImageView.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "nophoto"))
+            photoImageView.layer.cornerRadius = DesignConstants.imageSize / 2
+            photoImageView.layer.masksToBounds = true
+        }
     }
+}
+
+private extension DesignConstants {
+    static let margin1x: CGFloat = 6.0
+    static let margin2x: CGFloat = 12.0
+    static let margin3x: CGFloat = 18.0
+    static let margin4x: CGFloat = 24.0
+    static let spacing1x: CGFloat = 2.0
+    static let imageSize: CGFloat = 70.0
 }
