@@ -83,10 +83,11 @@ class DirectoryViewController: UIViewController {
 
     private func setupTableHeader() {
         if fetchFailed {
-            tableView.tableHeaderView = ErrorView()
+            tableView.tableHeaderView = ErrorHeaderView()
         } else {
             tableView.tableHeaderView = nil
         }
+        tableView.updateHeaderFooterViewHeight()
     }
 }
 

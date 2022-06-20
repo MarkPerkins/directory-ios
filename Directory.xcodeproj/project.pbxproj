@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4081B12B285FBBD500473E8F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4081B12A285FBBD500473E8F /* SDWebImage */; };
-		4081B12E285FCCC200473E8F /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B12D285FCCC200473E8F /* ErrorView.swift */; };
+		4081B12E285FCCC200473E8F /* ErrorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */; };
+		4081B1322860E39600473E8F /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B1312860E39600473E8F /* UITableViewExtensions.swift */; };
 		40CA839B285DFA88002203B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839A285DFA88002203B2 /* Assets.xcassets */; };
 		40CA839E285DFA88002203B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839D285DFA88002203B2 /* Preview Assets.xcassets */; };
 		40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83C0285DFB69002203B2 /* AppDelegate.swift */; };
@@ -39,7 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4081B12D285FCCC200473E8F /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHeaderView.swift; sourceTree = "<group>"; };
+		4081B1312860E39600473E8F /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		40CA8393285DFA87002203B2 /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CA839A285DFA88002203B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40CA839D285DFA88002203B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 				40CA83CB285E040F002203B2 /* DirectoryViewController.swift */,
 				40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */,
 				40CA83E6285E75A7002203B2 /* EmployeeTableViewCell.swift */,
-				4081B12D285FCCC200473E8F /* ErrorView.swift */,
+				4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */,
 			);
 			path = Directory;
 			sourceTree = "<group>";
@@ -166,6 +168,7 @@
 				40CA83D2285E0901002203B2 /* UITableViewCellExtensions.swift */,
 				40CA83E2285E6FC0002203B2 /* ArrayExtensions.swift */,
 				40CA83EC285E807E002203B2 /* UIViewExtensions.swift */,
+				4081B1312860E39600473E8F /* UITableViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,10 +297,11 @@
 				40CA83CE285E0419002203B2 /* DirectoryViewModel.swift in Sources */,
 				40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */,
 				40CA83C3285DFB84002203B2 /* SceneDelegate.swift in Sources */,
+				4081B1322860E39600473E8F /* UITableViewExtensions.swift in Sources */,
 				40CA83CC285E040F002203B2 /* DirectoryViewController.swift in Sources */,
 				40CA83ED285E807E002203B2 /* UIViewExtensions.swift in Sources */,
 				40CA83CA285E0032002203B2 /* Constants.swift in Sources */,
-				4081B12E285FCCC200473E8F /* ErrorView.swift in Sources */,
+				4081B12E285FCCC200473E8F /* ErrorHeaderView.swift in Sources */,
 				40CA83DC285E5BE1002203B2 /* DirectoryAPI.swift in Sources */,
 				40CA83D5285E0D50002203B2 /* DirectoryNavigationController.swift in Sources */,
 				40CA83E8285E75A7002203B2 /* EmployeeTableViewCell.swift in Sources */,
