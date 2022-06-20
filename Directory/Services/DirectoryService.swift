@@ -11,7 +11,7 @@ class DirectoryService: DirectoryAPI {
     }()
 
     func fetchEmployees(sortedBy: DirectorySort, completion: @escaping (Result<[Employee], DirectoryServiceError>) -> Void) {
-        guard let url = URL(string: Constants.Network.directoryEndpoint) else {  //Constants.MockResponses.malformed) else { //
+        guard let url = URL(string: Constants.Network.directoryEndpoint) else {
             return
         }
 

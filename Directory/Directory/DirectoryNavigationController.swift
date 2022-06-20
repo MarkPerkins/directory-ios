@@ -1,5 +1,3 @@
 import UIKit
 
-class DirectoryNavigationController: UINavigationController {
-    
-}
+class DirectoryNavigationController: UINavigationController { }
