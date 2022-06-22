@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403230E8286354970082AD3C /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 403230E6286354750082AD3C /* success.json */; };
+		403230E9286357EC0082AD3C /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 403230E6286354750082AD3C /* success.json */; };
 		4081B12B285FBBD500473E8F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4081B12A285FBBD500473E8F /* SDWebImage */; };
 		4081B12E285FCCC200473E8F /* ErrorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */; };
 		4081B1322860E39600473E8F /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B1312860E39600473E8F /* UITableViewExtensions.swift */; };
+		4081B1342860EE5000473E8F /* DirectoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B1332860EE5000473E8F /* DirectoryViewModelTests.swift */; };
 		40CA839B285DFA88002203B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839A285DFA88002203B2 /* Assets.xcassets */; };
 		40CA839E285DFA88002203B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40CA839D285DFA88002203B2 /* Preview Assets.xcassets */; };
 		40CA83C1285DFB69002203B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA83C0285DFB69002203B2 /* AppDelegate.swift */; };
@@ -40,8 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		403230E6286354750082AD3C /* success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHeaderView.swift; sourceTree = "<group>"; };
 		4081B1312860E39600473E8F /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		4081B1332860EE5000473E8F /* DirectoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModelTests.swift; sourceTree = "<group>"; };
 		40CA8393285DFA87002203B2 /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40CA839A285DFA88002203B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40CA839D285DFA88002203B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		403230E52863545A0082AD3C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				403230E6286354750082AD3C /* success.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		40CA838A285DFA87002203B2 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		40CA83C7285DFFCC002203B2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				403230E52863545A0082AD3C /* Mocks */,
 				40CA83D1285E08F1002203B2 /* Extensions */,
 				40CA83C9285E0032002203B2 /* Constants.swift */,
 			);
@@ -156,6 +170,7 @@
 				40CA83D4285E0D50002203B2 /* DirectoryNavigationController.swift */,
 				40CA83CB285E040F002203B2 /* DirectoryViewController.swift */,
 				40CA83CD285E0419002203B2 /* DirectoryViewModel.swift */,
+				4081B1332860EE5000473E8F /* DirectoryViewModelTests.swift */,
 				40CA83E6285E75A7002203B2 /* EmployeeTableViewCell.swift */,
 				4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */,
 			);
@@ -239,6 +254,7 @@
 					};
 					40CA83A2285DFA88002203B2 = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 						TestTargetID = 40CA8392285DFA87002203B2;
 					};
 				};
@@ -273,6 +289,7 @@
 			files = (
 				40CA839E285DFA88002203B2 /* Preview Assets.xcassets in Resources */,
 				40CA839B285DFA88002203B2 /* Assets.xcassets in Resources */,
+				403230E9286357EC0082AD3C /* success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403230E8286354970082AD3C /* success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4081B1342860EE5000473E8F /* DirectoryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,14 +521,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.block.takehome.DirectoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Directory.app/Directory";
@@ -521,10 +547,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.block.takehome.DirectoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
