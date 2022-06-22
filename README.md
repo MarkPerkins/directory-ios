@@ -30,6 +30,8 @@
 
 - A collectionview could have been used for greater control and flexibility down the road.
 
+- Colors should have be configured in an asset catalog to better accomdate dark mode, as i noticed issues with the large title navigation, even if i attempted to override the user interface style.
+
 ## Did you copy any code or dependencies? Please make sure to attribute them here!
 As a personal challenge, i tried to just put this together without any.  That said, a couple caveats.
 
