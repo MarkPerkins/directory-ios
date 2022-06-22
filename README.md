@@ -1,13 +1,13 @@
 ## Build tools & versions used
 - Swift, XCode 13.4, Reworked a SwiftUI template to launch via Scene/App Delegate.
-- Revealapp.com for assitance setting up layout
+- Revealapp.com for assistance setting up layout
 
 ## Steps to run the app
-1.  Open xcodeproj and let swift package manager pull related dependencies.
+1.  Open Xcode Project file and let swift package manager pull related dependencies.
 2.  Build the 'Directory' scheme to your iOS simulator.
 3.  3rd Party libraries used
 	- [Codeextended](https://github.com/JohnSundell/Codextended)
-		- even greater simplification of codable 
+		- even greater simplification of Codable 
 	- [SDWebImage](https://github.com/SDWebImage/SDWebImage)
 		- image cacheing
 
@@ -15,22 +15,22 @@
 - clean code, easy to follow structure, with focus on future improvements and testability.
 
 ## What was the reason for your focus? What problems were you trying to solve?
-- I was stuck for a bit on how to get the table header to properly size itself.  I also debated attempting to mix a SwiftUI View for the table view cell.  I decided the way to do that was just going to add unecissary mix of code for the task at hand.
+- I was stuck for a bit on how to get the table header to properly size itself.  I also debated attempting to mix a SwiftUI View for the table view cell.  I decided the way to do that was just going to add unnecessary mix of code for the task at hand.
 
 ## How long did you spend on this project?
 * 8-10 hours over the course of about 4 days.
 
 ## Did you make any trade-offs for this project? What would you have done differently with more time?
-- I built this using UITableView, but would have spent more time implementing this in a CollectionView as i feel it can provide greater flexibility as your featureset enhances.  For the sake of simplicity i made the trade off to create a UITableView instead.
+- I built this using UITableView, but would have spent more time implementing this in a CollectionView as i feel it can provide greater flexibility as your feature sets enhance.  For the sake of simplicity i made the trade off to create a UITableView instead.
 
 ## What do you think is the weakest part of your project?
-- Currently this has a lack of a netowork mocking service to validate the Directory Service and write some unit tests.
+- Currently this has a lack of a network mocking service to validate the Directory Service and write some unit tests.
 
 - I am also not happy with the solution for the error state in which i used the table header.
 
-- A collectionview could have been used for greater control and flexibility down the road.
+- A Collection View could have been used for greater control and flexibility down the road.
 
-- Colors should have be configured in an asset catalog to better accomdate dark mode, as i noticed issues with the large title navigation, even if i attempted to override the user interface style.
+- Colors should have be configured in an asset catalog to better accommodate dark mode, as i noticed issues with the large title navigation, even if i attempted to override the user interface style.
 
 ## Did you copy any code or dependencies? Please make sure to attribute them here!
 As a personal challenge, i tried to just put this together without any.  That said, a couple caveats.
