@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		403230E8286354970082AD3C /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 403230E6286354750082AD3C /* success.json */; };
-		403230E9286357EC0082AD3C /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 403230E6286354750082AD3C /* success.json */; };
 		4081B12B285FBBD500473E8F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4081B12A285FBBD500473E8F /* SDWebImage */; };
 		4081B12E285FCCC200473E8F /* ErrorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B12D285FCCC200473E8F /* ErrorHeaderView.swift */; };
 		4081B1322860E39600473E8F /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B1312860E39600473E8F /* UITableViewExtensions.swift */; };
@@ -289,7 +288,6 @@
 			files = (
 				40CA839E285DFA88002203B2 /* Preview Assets.xcassets in Resources */,
 				40CA839B285DFA88002203B2 /* Assets.xcassets in Resources */,
-				403230E9286357EC0082AD3C /* success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

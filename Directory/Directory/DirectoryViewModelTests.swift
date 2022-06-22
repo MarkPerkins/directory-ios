@@ -24,7 +24,8 @@ class SuccessfulMockDirectoryService: DirectoryAPI {
     }
 
     private func loadJsonFile(_ fileName: String) -> Data? {
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+        let bundle = Bundle(for: SuccessfulMockDirectoryService.self)
+        if let path = bundle.path(forResource: fileName, ofType: "json") {
             return try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         }
         return nil
